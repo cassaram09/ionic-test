@@ -22,8 +22,7 @@ angular.module('app', ['ionic'])
 
     .state('home', {
     url: '/',
-    templateUrl: 'templates/home.html',
-    controller: "appController"
+    controller: "appController as ctrl"
   })
 
   // if none of the above states are matched, use this as the fallback

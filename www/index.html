@@ -24,18 +24,38 @@
 
   <body ng-app="app">
 
-    <ion-header-bar align-title="left" class="bar-positive">
-      <h1 class="title">Freshly Pressed Articles</h1>
-      <div class="buttons" ng-controller="appController as ctrl">
-        <button class="button" ng-click="ctrl.refresh()">
-          <i class="icon ion-refresh"></i>
-        </button>
-      </div>
-    </ion-header-bar>
-    
-    <ion-nav-view>
+    <div ng-controller="appController as ctrl">
 
-    </ion-nav-view>
+      <ion-header-bar align-title="left" class="bar-positive">
+        <h1 class="title">Freshly Pressed Articles</h1>
+        <div class="buttons">
+          <button class="button" ng-click="ctrl.refresh()">
+            <i class="icon ion-refresh"></i>
+          </button>
+        </div>
+      </ion-header-bar>
+      
+      <ion-content class="padding"> 
+
+        <ion-refresher on-refresh="ctrl.refresh()"></ion-refresher>
+
+
+        <div class="card" ng-repeat="post in ctrl.posts track by post.ID">
+          <div class="item item-divider">
+            <div class="item-avatar-left">
+              <img ng-src="{{post.author.avatar_URL}}">
+              <h2>{{post.author.name}}</h2>
+              <p>{{post.title}}</p>
+              <p><a href="{{post.author.URL}}">{{post.author.URL}}</a></p>
+            </div>
+          </div>
+          <div  ng-bind-html="post.content" class="item item-text-wrap">
+          </div>
+        </div>
+
+      </ion-content>
+
+    </div>
 
   </body>
 </html>
