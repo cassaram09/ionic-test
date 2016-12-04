@@ -22,11 +22,11 @@ angular.module('app', ['ionic'])
 
     .state('home', {
     url: '/',
-    abstract: true,
-    templateUrl: 'templates/home.html'
+    templateUrl: 'templates/home.html',
+    controller: "homeController"
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/');
 
 });

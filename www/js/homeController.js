@@ -1,8 +1,8 @@
-function HomeController ($scope, PostService){
+function HomeController ($scope, postService){
 
 
 }
 
 angular
   .module('app')
-  .controller('HomeController', HomeController)
+  .controller('homeController', HomeController)

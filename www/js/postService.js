@@ -1,8 +1,8 @@
-function PostService ($scope, $http){
+function PostService ($http){
 
 
 }
 
 angular
   .module('app')
-  .controller('PostService', PostService)
+  .service('postService', PostService)
