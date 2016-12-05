@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.freshlypressed163888" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>freshly-pressed</name>
+  <name>Freshly Pressed - Ionic Demo</name>
   <description>
-        An Ionic Framework and Cordova project.
+        A demo of the Ionic Framework.
     </description>
   <author email="mail@mattcassara.com" href="http://mattcassara.com/">
       Matt Cassara
